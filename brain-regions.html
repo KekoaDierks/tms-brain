@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brain Regions | rTMS</title>
+  <link rel="stylesheet" href="styles.css?v=15">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-shell">
+      <div class="header-top-row">
+        <a class="brand" href="index.html">Repetitive Transcranial Magnetic Stimulation (rTMS)</a>
+
+        <a
+          class="university-lockup"
+          href="https://engineering.up.edu/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="University of Portland Shiley School of Engineering"
+        >
+          <img
+            class="header-seal"
+            src="https://en.wikipedia.org/wiki/Special:Redirect/file/University_of_Portland_seal.svg"
+            alt="University of Portland seal"
+          >
+          <span class="university-lockup-text">
+            <strong>University of Portland</strong>
+            <span>Shiley School of Engineering</span>
+          </span>
+        </a>
+      </div>
+
+      <nav aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="overview.html">Overview</a>
+          <a class="active-nav" href="brain-regions.html">Brain Regions</a>
+          <a href="neuron-morphology.html">Neuron Morphology</a>
+          <a href="diego-1.html">Diego 1</a>
+          <a href="diego-2.html">Diego 2</a>
+          <a href="published-work.html">Published Work</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main brain-regions-page">
+    <section class="page-hero brain-regions-hero">
+      <p class="eyebrow">BRAIN REGIONS</p>
+      <h1>Three Regions, Three Different Roles in TMS</h1>
+      <p class="region-page-intro">
+        This project focuses on the relationship between the left dorsolateral prefrontal
+        cortex, the primary motor cortex, and the subgenual anterior cingulate cortex.
+        One is a major depression treatment target, one gives us a measurable physiological
+        reference, and one helps connect local stimulation to a broader mood related network.
+      </p>
+
+      <div class="region-jump-nav">
+        <a href="#dlpfc">DLPFC</a>
+        <a href="#motor-cortex">Motor Cortex</a>
+        <a href="#sgacc">sgACC</a>
+        <a href="#region-conclusion">Conclusion</a>
+        <a href="#layers">Cortical Layers</a>
+      </div>
+    </section>
+
+    <section class="page-content brain-regions-content">
+
+      <section class="region-relationship-intro">
+        <p class="eyebrow">WHY THESE THREE?</p>
+        <h2>Motor Evoked Responses and Depression Treatment Target</h2>
+        <p>
+          In clinical TMS, the motor cortex is useful because stimulation can produce a
+          visible or measurable muscle response. That response can be used to estimate a
+          patient's motor threshold. Depression treatment, however, is commonly delivered
+          to the left DLPFC, where there is no equally simple outward signal that tells us
+          exactly when the targeted neurons have reached threshold.
+        </p>
+        <p>
+          The sgACC adds a third piece to the story. It is a deeper region involved in
+          depression related networks and has become important in research on how DLPFC
+          stimulation sites are selected. Together, these three regions help connect the
+          clinical process of TMS with the neuronal simulations in this project.
+        </p>
+      </section>
+
+      <section class="region-visual-section">
+        <div class="region-visual-heading">
+          <p class="eyebrow">MODELED TARGETS</p>
+          <h2>The Same Coil Interacts Differently With Each Cortical Target</h2>
+          <p>
+            The motor cortex and DLPFC occupy different parts of the cortical surface.
+            Their geometry changes the field produced at the target, which is one reason
+            the neuronal threshold cannot be assumed to transfer between regions using one
+            fixed ratio.
+          </p>
+        </div>
+        <div class="research-figure-grid research-figure-grid-two">
+          <figure class="research-figure">
+            <img src="assets/research/brain-m1-efield.png"
+                 alt="SimNIBS head model showing a TMS coil and electric field distribution near the motor cortex."
+                 loading="lazy" />
+            <figcaption><span class="figure-number">Figure 5.</span> Representative motor cortex electric field model.</figcaption>
+          </figure>
+          <figure class="research-figure">
+            <img src="assets/research/brain-dlpfc-efield.png"
+                 alt="SimNIBS head model showing a TMS coil and electric field distribution near the DLPFC."
+                 loading="lazy" />
+            <figcaption><span class="figure-number">Figure 6.</span> Representative DLPFC electric field model.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <article id="dlpfc" class="region-detail-card">
+        <div class="region-detail-header">
+          <div>
+            <p class="eyebrow">DLPFC · LEFT HEMISPHERE</p>
+            <h2>Dorsolateral Prefrontal Cortex</h2>
+          </div>
+          <div class="region-role-badge">Primary depression treatment region</div>
+        </div>
+
+        <div class="region-detail-grid">
+          <section>
+            <span class="region-detail-number">01</span>
+            <h3>What does it do?</h3>
+            <p>
+              The DLPFC is part of the prefrontal cortex and contributes to executive
+              functions such as working memory, attention, planning, decision making,
+              cognitive control, and the regulation of behavior and emotion.
+            </p>
+            <p>
+              Rather than acting alone, it communicates with distributed cortical and
+              subcortical networks involved in cognition, motivation, and emotional
+              processing.
+            </p>
+          </section>
+
+          <section>
+            <span class="region-detail-number">02</span>
+            <h3>What is its role in depression?</h3>
+            <p>
+              Major depressive disorder has been associated with altered activity and
+              connectivity within prefrontal and limbic networks that include the DLPFC.
+              These changes are relevant to symptoms such as impaired cognitive control,
+              difficulty shifting attention away from negative information, and disrupted
+              regulation of mood.
+            </p>
+            <p>
+              Depression is heterogeneous, so the DLPFC should not be thought of as a
+              single “depression center.” Its importance comes from its position within a
+              larger network of regions whose interactions can differ across individuals.
+            </p>
+          </section>
+
+          <section>
+            <span class="region-detail-number">03</span>
+            <h3>What is its role in TMS?</h3>
+            <p>
+              The <strong>left DLPFC is one of the best established cortical targets for
+              rTMS treatment of major depressive disorder.</strong> High frequency rTMS
+              and intermittent theta burst stimulation are commonly delivered over this
+              region in depression treatment protocols.
+            </p>
+            <p>
+              Stimulation of the DLPFC may influence not only local cortical neurons but
+              also connected brain networks, including pathways involving the sgACC.
+              This network level effect is one reason that the exact choice of DLPFC
+              stimulation site remains an active area of research.
+            </p>
+          </section>
+
+          <section class="region-project-box">
+            <span class="region-detail-number">04</span>
+            <h3>Why is it important to our project?</h3>
+            <p>
+              The DLPFC is our primary treatment region model. We simulate how its neurons
+              respond as stimulation parameters change, including coil orientation, pulse
+              width, waveform, and neuronal morphology.
+            </p>
+            <p>
+              The larger goal is to determine whether DLPFC specific stimulation behavior
+              can help identify settings that reach neuronal activation with less required
+              stimulator output.
+            </p>
+          </section>
+        </div>
+
+        <div class="region-takeaway">
+          <strong>Key idea:</strong>
+          The DLPFC is where the treatment is being delivered, but unlike the motor cortex,
+          it does not give clinicians a simple muscle response that directly reveals its
+          neuronal activation threshold.
+        </div>
+      </article>
+
+      <article id="motor-cortex" class="region-detail-card">
+        <div class="region-detail-header">
+          <div>
+            <p class="eyebrow">M1 · PRIMARY MOTOR CORTEX</p>
+            <h2>Primary Motor Cortex</h2>
+          </div>
+          <div class="region-role-badge">Physiological reference region</div>
+        </div>
+
+        <div class="region-detail-grid">
+          <section>
+            <span class="region-detail-number">01</span>
+            <h3>What does it do?</h3>
+            <p>
+              The primary motor cortex is a major cortical region for the control of
+              voluntary movement. Different portions of M1 are associated with movement
+              of different parts of the body, and its output contributes to descending
+              motor pathways that ultimately influence skeletal muscle activity.
+            </p>
+          </section>
+
+          <section>
+            <span class="region-detail-number">02</span>
+            <h3>What is its role in depression?</h3>
+            <p>
+              M1 is <strong>not the main therapeutic target for depression</strong>, but
+              motor system physiology can still be altered in major depressive disorder.
+              TMS studies have reported differences in measures of motor cortical
+              inhibition, facilitation, and plasticity in people with depression.
+            </p>
+            <p>
+              Depression can also include psychomotor symptoms such as slowed movement,
+              although these symptoms arise from distributed brain networks rather than
+              from M1 alone.
+            </p>
+          </section>
+
+          <section>
+            <span class="region-detail-number">03</span>
+            <h3>What is its role in TMS?</h3>
+            <p>
+              M1 gives TMS something extremely useful: an observable output. When the
+              appropriate motor region is stimulated strongly enough, a motor evoked
+              potential can be recorded from a muscle or a visible movement can occur.
+            </p>
+            <p>
+              This makes it possible to determine a <strong>motor threshold</strong>,
+              which is widely used to calibrate stimulation intensity for an individual.
+              Many depression protocols then set prefrontal stimulation as a percentage
+              of that motor threshold.
+            </p>
+          </section>
+
+          <section class="region-project-box">
+            <span class="region-detail-number">04</span>
+            <h3>Why is it important to our project?</h3>
+            <p>
+              M1 is our reference region. We can simulate the same types of neurons and
+              stimulation parameters in M1 and the DLPFC, then compare how much stimulation
+              each model requires to reach firing threshold.
+            </p>
+            <p>
+              This comparison lets us ask whether a relationship measured at the motor
+              cortex should automatically be assumed to translate to the DLPFC.
+            </p>
+          </section>
+        </div>
+
+        <div class="region-takeaway">
+          <strong>Key idea:</strong>
+          M1 is central to our study not because it is the main depression target, but
+          because it provides the measurable physiological reference used to help set
+          clinical TMS intensity.
+        </div>
+      </article>
+
+      <article id="sgacc" class="region-detail-card">
+        <div class="region-detail-header">
+          <div>
+            <p class="eyebrow">sgACC · DEEPER MOOD RELATED NETWORK</p>
+            <h2>Subgenual Anterior Cingulate Cortex</h2>
+          </div>
+          <div class="region-role-badge">Network level depression region</div>
+        </div>
+
+        <div class="region-detail-grid">
+          <section>
+            <span class="region-detail-number">01</span>
+            <h3>What does it do?</h3>
+            <p>
+              The sgACC is located beneath the genu of the corpus callosum within the
+              ventromedial cingulate region. It participates in networks involved in mood,
+              emotional processing, autonomic regulation, reward, and the integration of
+              internal emotional states with behavior.
+            </p>
+          </section>
+
+          <section>
+            <span class="region-detail-number">02</span>
+            <h3>What is its role in depression?</h3>
+            <p>
+              The sgACC has been repeatedly implicated in major depressive disorder.
+              Studies have reported structural, activity, and connectivity differences
+              involving this region, although the direction and size of those differences
+              are not identical across every study or every patient.
+            </p>
+            <p>
+              Its importance is therefore best understood as part of a distributed
+              depression related network rather than as a single region that independently
+              causes depressive symptoms.
+            </p>
+          </section>
+
+          <section>
+            <span class="region-detail-number">03</span>
+            <h3>What is its role in TMS?</h3>
+            <p>
+              Conventional DLPFC TMS does not normally stimulate the sgACC directly because
+              the sgACC lies deeper in the brain. Instead, researchers study whether
+              stimulating a superficial cortical region can influence connected deeper
+              networks.
+            </p>
+            <p>
+              A particularly important finding is that DLPFC sites with stronger negative
+              functional connectivity to the sgACC have often been associated with better
+              antidepressant response. This relationship has helped motivate
+              connectivity guided approaches to selecting DLPFC targets.
+            </p>
+          </section>
+
+          <section class="region-project-box">
+            <span class="region-detail-number">04</span>
+            <h3>Why is it important to our project?</h3>
+            <p>
+              Our neuronal simulations focus mainly on the cortical regions where the TMS
+              electric field is applied, especially the DLPFC and M1. The sgACC helps
+              explain <em>why</em> DLPFC targeting matters at the network level.
+            </p>
+            <p>
+              It connects our local question: how efficiently can DLPFC neurons be
+              stimulated, to the larger depression circuitry that motivates targeting the
+              DLPFC in the first place?
+            </p>
+          </section>
+        </div>
+
+        
+        <figure class="research-figure research-figure-medium research-figure-centered">
+          <img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/af8e/3607793/11b718179319/fnhum-07-00096-g0002.jpg"
+               alt="Medial brain anatomy diagram labeling the subgenual anterior cingulate cortex and surrounding regions."
+               loading="lazy" />
+          <figcaption><span class="figure-number">Figure 7.</span> The sgACC is shown on the sagittal MRI view below the corpus callosum,
+            alongside other anterior cingulate subdivisions.
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3607793/" target="_blank" rel="noopener noreferrer">Source: Mies et al., 2013</a>.
+          </figcaption>
+        </figure>
+
+        <div class="region-takeaway">
+          <strong>Key idea:</strong>
+          The sgACC is not simply another surface target. It represents the deeper network
+          context that may help explain why stimulation of one DLPFC location can be more
+          clinically useful than another.
+        </div>
+      </article>
+
+
+      <article id="region-conclusion" class="research-conclusion region-research-conclusion">
+        <p class="eyebrow">DATA BACKED CONCLUSION</p>
+        <h2>Does 120% of Motor Threshold Describe the DLPFC?</h2>
+
+        <p class="research-conclusion-lead">
+          <strong>No. In our simulations, the DLPFC L2/3 firing requirement is not
+          described by a fixed 120% relationship to Motor Cortex L5.</strong>
+          The relationship changes with pulse width and pulse shape. Under some tested
+          conditions the DLPFC required more induced electric field than the motor cortex,
+          while under other conditions it required less.
+        </p>
+
+        
+        <figure class="research-figure research-figure-wide research-figure-light">
+          <img src="assets/research/brain-rmt-ratio.png"
+               alt="Graph comparing DLPFC L2/3 threshold as a percentage of motor cortex L5 threshold across pulse widths for rectangular, monophasic, and biphasic waveforms."
+               loading="lazy" />
+          <figcaption><span class="figure-number">Figure 8.</span> DLPFC L2/3 threshold relative to Motor Cortex L5 across pulse width. The
+            horizontal reference lines mark 120 percent and 100 percent.
+          </figcaption>
+        </figure>
+
+        <div class="conclusion-data-grid conclusion-data-grid-three">
+          <section class="conclusion-data-card">
+            <span>RECTANGULAR</span>
+            <strong>77.9% to 139.6%</strong>
+            <p>
+              The DLPFC induced E field threshold fell below 120% of M1 at
+              <strong>135 µs</strong>, below the M1 threshold at
+              <strong>255 µs</strong>, and reached <strong>77.9%</strong>
+              of the M1 threshold at 600 µs.
+            </p>
+          </section>
+
+          <section class="conclusion-data-card">
+            <span>MONOPHASIC</span>
+            <strong>81.6% to 140.2%</strong>
+            <p>
+              The DLPFC induced E field threshold fell below 120% of M1 at
+              <strong>120 µs</strong>, below the M1 threshold at
+              <strong>240 µs</strong>, and reached a minimum of
+              <strong>81.6%</strong> of the M1 threshold.
+            </p>
+          </section>
+
+          <section class="conclusion-data-card">
+            <span>BIPHASIC</span>
+            <strong>91.4% to 170.7%</strong>
+            <p>
+              The DLPFC induced E field threshold fell below 120% of M1 at
+              <strong>300 µs</strong>, below the M1 threshold at
+              <strong>450 µs</strong>, and reached a minimum of
+              <strong>91.4%</strong> of the M1 threshold.
+            </p>
+          </section>
+        </div>
+
+        <div class="research-conclusion-answer">
+          <span>WHAT THE DATA SAYS</span>
+          <p>
+            Across the tested pulse widths and pulse shapes, the DLPFC L2/3 to
+            Motor Cortex L5 induced E field threshold ratio ranged from
+            <strong>77.9% to 170.7%</strong>. A single 120% ratio therefore does
+            not describe the modeled neuronal threshold relationship between these
+            regions. Motor threshold remains a useful clinical reference, but our
+            results show that the stimulation required by DLPFC L2/3 neurons depends
+            strongly on the stimulation parameters being used.
+          </p>
+        </div>
+
+        <p class="research-conclusion-note">
+          For each pulse shape, the DLPFC L2/3 and Motor Cortex L5 pulse width sweeps
+          use the coil orientation that produced the lowest firing threshold for that
+          model. The induced E field threshold is calculated from the firing threshold
+          in dI/dt multiplied by the corresponding EROI value.
+        </p>
+      </article>
+
+      <article id="layers" class="cortical-layers-bridge">
+        <div>
+          <p class="eyebrow">A BRIDGE TO THE NEXT TAB</p>
+          <h2>What about cortical layers?</h2>
+          <p>
+            The cerebral cortex is organized into layers containing different populations
+            of neurons. In this project, two especially important models are
+            <strong>layer 2/3 pyramidal neurons</strong> and
+            <strong>layer 5 pyramidal neurons</strong>. Their dendrites, axons, locations,
+            and connections are different, so they do not necessarily respond to the same
+            TMS electric field in the same way.
+          </p>
+          <a class="region-next-link" href="neuron-morphology.html">
+            Continue to Neuron Morphology →
+          </a>
+        </div>
+      
+        <div class="cortical-layers-visual">
+          <figure class="research-figure research-figure-contained">
+            <img src="assets/research/brain-cortical-layers.png"
+                 alt="Diagram of six cortical layers from the skull to deeper brain tissue."
+                 loading="lazy" />
+            <figcaption><span class="figure-number">Figure 9.</span> Cortical depth and layer change neuronal morphology, position, and the way
+              neurons experience the induced field.
+              <a href="https://medium.com/@nhwalnut/cortical-columns-in-vivo-and-in-silico-perspectives-6c5a3d6b3407" target="_blank" rel="noopener noreferrer">Source: Cortical Columns: In Vivo and In Silico Perspectives</a>.
+            </figcaption>
+          </figure>
+        </div>
+
+      </article>
+
+      <a class="back-link" href="index.html">← Back to 3D Brain</a>
+    </section>
+  </main>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-affiliation">
+        <img
+          class="footer-seal"
+          src="https://en.wikipedia.org/wiki/Special:Redirect/file/University_of_Portland_seal.svg"
+          alt="University of Portland seal"
+        >
+
+        <div>
+          <strong>University of Portland</strong>
+          <span>Shiley School of Engineering</span>
+          <small>Student research project on repetitive transcranial magnetic stimulation.</small>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links" aria-label="Footer links">
+          <a href="about.html">About</a>
+          <span class="footer-separator" aria-hidden="true">|</span>
+          <a href="partners.html">Partners</a>
+          <span class="footer-separator" aria-hidden="true">|</span>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-ai-note">Web page made with AI.</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

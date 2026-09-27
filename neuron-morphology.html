@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neuron Morphology | rTMS</title>
+  <link rel="stylesheet" href="styles.css?v=16">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-shell">
+      <div class="header-top-row">
+        <a class="brand" href="index.html">Repetitive Transcranial Magnetic Stimulation (rTMS)</a>
+
+        <a
+          class="university-lockup"
+          href="https://engineering.up.edu/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="University of Portland Shiley School of Engineering"
+        >
+          <img
+            class="header-seal"
+            src="https://en.wikipedia.org/wiki/Special:Redirect/file/University_of_Portland_seal.svg"
+            alt="University of Portland seal"
+          >
+          <span class="university-lockup-text">
+            <strong>University of Portland</strong>
+            <span>Shiley School of Engineering</span>
+          </span>
+        </a>
+      </div>
+
+      <nav aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="overview.html">Overview</a>
+          <a href="brain-regions.html">Brain Regions</a>
+          <a class="active-nav" href="neuron-morphology.html">Neuron Morphology</a>
+          <a href="diego-1.html">Diego 1</a>
+          <a href="diego-2.html">Diego 2</a>
+          <a href="published-work.html">Published Work</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main morphology-page">
+    <section class="page-hero morphology-hero">
+      <p class="eyebrow">NEURON MORPHOLOGY</p>
+      <h1>The Shape of a Neuron Changes TMS Effects</h1>
+      <p>
+        TMS does not stimulate every neuron in the same way. A neuron's cortical layer,
+        depth, orientation, dendritic tree, and especially its axonal geometry can all
+        change the electric field strength and direction required to trigger an action
+        potential. This project compares two Aberra pyramidal neuron models to understand
+        how those differences influence stimulation threshold.
+      </p>
+
+      <div class="morphology-jump-nav">
+        <a href="#why-morphology">Why Morphology Matters</a>
+        <a href="#m1-l5">M1 L5</a>
+        <a href="#dlpfc-l5">DLPFC L5</a>
+        <a href="#dlpfc-l23">DLPFC L2/3</a>
+        <a href="#threshold">Reducing Threshold</a>
+        <a href="#conclusion">Conclusion</a>
+      </div>
+    </section>
+
+    <section class="page-content morphology-content">
+
+      <article id="why-morphology" class="morphology-section morphology-intro">
+        <div class="morphology-section-heading">
+          <p class="eyebrow">WHY MORPHOLOGY MATTERS</p>
+          <h2>A neuron is more than a charge in an electric field</h2>
+        </div>
+
+        <div class="morphology-intro-grid">
+          <div>
+            <p class="morphology-large-copy">
+              A computational neuron is built from many connected compartments representing
+              the <strong>soma, dendrites, axon, branches, bends, and terminals</strong>.
+              The voltage induced by TMS is therefore distributed across a complicated
+              three dimensional structure rather than applied to one simple point.
+            </p>
+
+            <p>
+              Modern biophysical modeling indicates that direct activation by near threshold
+              TMS is strongly influenced by axonal geometry. Bends, branches, changes in
+              diameter, myelinated segments, and distal axonal structures can create sites
+              that are especially sensitive to the applied electric field.
+            </p>
+
+            <p>
+              This means that two neurons exposed to the same macroscopic electric field
+              magnitude may still have different firing thresholds if their morphologies
+              or orientations are different.
+            </p>
+          </div>
+
+          
+        <figure class="research-figure research-figure-medium research-figure-centered">
+          <img src="assets/research/morph-neuron-anatomy.png"
+               alt="Labeled neuron anatomy showing the nucleus, soma, dendrites, axon, myelin sheath, and nerve ending."
+               loading="lazy" />
+          <figcaption><span class="figure-number">Figure 10.</span> The soma, dendrites, axon, myelin, branches, and terminals create a distributed
+            electrical structure rather than a single stimulation point.
+          </figcaption>
+        </figure>
+
+          <aside class="morphology-callout">
+            <p class="eyebrow">IMPORTANT DISTINCTION</p>
+            <h3>We are not trying to change the neuron</h3>
+            <p>
+              Morphology is a biological property. The engineering opportunity is to
+              understand that morphology well enough to choose <strong>coil orientation,
+              pulse width, waveform, and stimulation intensity</strong> that couple to the
+              neuron more efficiently.
+            </p>
+          </aside>
+        </div>
+
+        <div class="morphology-parts">
+          <div>
+            <strong>Dendrites</strong>
+            <span>Receive and integrate inputs from other neurons.</span>
+          </div>
+          <div>
+            <strong>Soma</strong>
+            <span>Contains the cell body and integrates membrane activity.</span>
+          </div>
+          <div>
+            <strong>Axon</strong>
+            <span>Carries action potentials away from the cell body.</span>
+          </div>
+          <div>
+            <strong>Branches & terminals</strong>
+            <span>Provide multiple possible sites where the TMS electric field can strongly affect membrane polarization.</span>
+          </div>
+        </div>
+      </article>
+
+      <article id="m1-l5" class="morphology-section neuron-profile">
+        <div class="neuron-profile-header">
+          <div>
+            <p class="eyebrow">REFERENCE MODEL</p>
+            <h2>Motor Cortex Layer 5 Pyramidal Neuron</h2>
+          </div>
+          <span class="neuron-profile-badge">M1 · L5</span>
+        </div>
+
+        <div class="neuron-profile-grid">
+          <section>
+            <h3>Why layer 5 matters in M1</h3>
+            <p>
+              Layer 5 contains large pyramidal projection neurons with prominent apical
+              dendrites and axons that can extend toward deeper structures and white matter.
+              In the motor cortex, layer 5 output neurons are closely associated with the
+              descending motor system, making them a natural cell class to include when
+              studying the physiological effects underlying motor threshold measurements.
+            </p>
+          </section>
+
+          <section>
+            <h3>What TMS modeling tells us</h3>
+            <p>
+              Morphologically realistic TMS models have found layer 5 pyramidal cells to be
+              highly sensitive to electric field direction and, in some model sets, among
+              the lowest threshold cortical cell types.
+              The exact ranking of L5 versus more superficial pyramidal cells is
+              model dependent, which is itself evidence that morphology matters.
+            </p>
+          </section>
+
+          <section class="neuron-profile-project">
+            <h3>Role in our project</h3>
+            <p>
+              M1 L5 acts as a reference point: <strong>how much stimulation is required to
+              activate a motor cortex pyramidal neuron under a given waveform, pulse width,
+              and orientation?</strong> That result can then be compared with the same or
+              different cell classes placed in the DLPFC.
+            </p>
+          </section>
+        </div>
+      
+        <div class="model-visual-block">
+          <div class="research-figure-grid research-figure-grid-four">
+            <figure class="research-figure">
+              <img src="assets/research/morph-l5-model.png" alt="Aberra Layer 5 pyramidal neuron morphology plot." loading="lazy" />
+              <figcaption><span class="figure-number">Figure 11.</span> Aberra L5 morphology used in the project.</figcaption>
+            </figure>
+            <figure class="research-figure">
+              <img src="assets/research/morph-l5-pre.png" alt="Layer 5 pyramidal neuron before stimulation." loading="lazy" />
+              <figcaption><span class="figure-number">Figure 12.</span> Before stimulation.</figcaption>
+            </figure>
+            <figure class="research-figure">
+              <img src="assets/research/morph-l5-initial.png" alt="Layer 5 pyramidal neuron during initial stimulation." loading="lazy" />
+              <figcaption><span class="figure-number">Figure 13.</span> Initial stimulation.</figcaption>
+            </figure>
+            <figure class="research-figure">
+              <img src="assets/research/morph-l5-peak.png" alt="Layer 5 pyramidal neuron near peak stimulation." loading="lazy" />
+              <figcaption><span class="figure-number">Figure 14.</span> Peak stimulation.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+      </article>
+
+      <article id="dlpfc-l5" class="morphology-section neuron-profile">
+        <div class="neuron-profile-header">
+          <div>
+            <p class="eyebrow">REGION COMPARISON</p>
+            <h2>DLPFC Layer 5 Pyramidal Neuron</h2>
+          </div>
+          <span class="neuron-profile-badge">DLPFC · L5</span>
+        </div>
+
+        <div class="neuron-profile-grid">
+          <section>
+            <h3>Same broad cell class, different environment</h3>
+            <p>
+              A DLPFC L5 model gives us a useful comparison with M1 L5. Even when a similar
+              neuronal morphology is used, the local cortical geometry, coil to cortex
+              relationship, and electric field orientation are different in the DLPFC.
+            </p>
+          </section>
+
+          <section>
+            <h3>Why location can change threshold</h3>
+            <p>
+              Multi scale modeling has shown that identical stimulation settings can create
+              different field strengths and different neuronal activation thresholds in M1
+              and the DLPFC.
+              Therefore, changing the target region alone can change how efficiently a neuron
+              is recruited.
+            </p>
+          </section>
+
+          <section class="neuron-profile-project">
+            <h3>Role in our project</h3>
+            <p>
+              This model helps answer a controlled question: if we keep the neuron broadly
+              comparable but move from the motor cortex to the treatment region, how much of
+              the threshold difference is produced by the <strong>region and electric field</strong>
+              rather than by changing neuronal layer?
+            </p>
+          </section>
+        </div>
+      
+        <div class="neuron-visual-note">
+          <img src="assets/research/morph-l5-model.png"
+               alt="Aberra Layer 5 pyramidal neuron morphology plot used for DLPFC Layer 5 simulations."
+               loading="lazy" />
+          <div>
+            <span class="mini-label">SAME MORPHOLOGY CLASS</span>
+            <p>
+              The L5 morphology can be placed in a different modeled cortical region.
+              Changing the surrounding field while keeping the cell model comparable helps
+              separate regional effects from morphology effects.
+            </p>
+          </div>
+        </div>
+
+      </article>
+
+      <article id="dlpfc-l23" class="morphology-section neuron-profile neuron-profile-focus">
+        <div class="neuron-profile-header">
+          <div>
+            <p class="eyebrow">PRIMARY MORPHOLOGY FOCUS</p>
+            <h2>DLPFC Layer 2/3 Pyramidal Neuron</h2>
+          </div>
+          <span class="neuron-profile-badge">DLPFC · L2/3</span>
+        </div>
+
+        <div class="l23-intro">
+          <p>
+            Layer 2/3 pyramidal neurons are especially interesting for this project because
+            they occupy more superficial cortical layers and participate heavily in
+            <strong>corticocortical communication</strong>. In the DLPFC, these neurons
+            help connect prefrontal circuits with other cortical regions, making them
+            relevant both to TMS physics and to the distributed networks involved in
+            depression.
+          </p>
+        </div>
+
+        <div class="l23-grid">
+          <section>
+            <span class="l23-label">SUPERFICIAL LOCATION</span>
+            <h3>Closer to the applied field</h3>
+            <p>
+              TMS induced electric fields are generally strongest near the cortical surface
+              and decrease with distance and tissue geometry. Because L2/3 neurons are more
+              superficial than L5 neurons, they occupy a region where direct cortical
+              stimulation is especially relevant.
+            </p>
+          </section>
+
+          <section>
+            <span class="l23-label">CORTICOCORTICAL AXONS</span>
+            <h3>A complex arbor gives the field many possible targets</h3>
+            <p>
+              L2/3 pyramidal neurons contain branching intracortical axons whose terminals
+              extend in multiple directions. Realistic simulations show that these branches
+              and distal axonal structures can create low threshold activation sites when
+              appropriately aligned with the electric field.
+            </p>
+          </section>
+
+          <section>
+            <span class="l23-label">DIRECTIONAL SENSITIVITY</span>
+            <h3>Changing coil angle changes the neuron field relationship</h3>
+            <p>
+              Rotating the TMS coil changes the direction of the induced cortical electric
+              field. A different field direction can align with a different axonal branch,
+              bend, or terminal. That provides a cellular explanation for why firing
+              threshold can oscillate as coil orientation is swept through different angles.
+            </p>
+          </section>
+
+          <section>
+            <span class="l23-label">DEPRESSION RELEVANCE</span>
+            <h3>Layer III is also biologically interesting in the DLPFC</h3>
+            <p>
+              Postmortem studies of DLPFC Brodmann area 46 have reported changes involving
+              layer III pyramidal neurons in major depressive disorder, including differences
+              in pyramidal cell number or morphology in some cohorts.
+              These findings do not mean that one cell type explains depression, but they
+              add biological motivation for examining superficial DLPFC pyramidal neurons.
+            </p>
+          </section>
+        </div>
+
+        <div class="l23-why-focus">
+          <div>
+            <p class="eyebrow">WHY THIS MODEL GETS EXTRA ATTENTION</p>
+            <h3>DLPFC L2/3 sits at the intersection of accessibility, anatomy, and stimulation efficiency</h3>
+          </div>
+          <p>
+            It is located relatively close to the cortical surface, has an axonal structure
+            capable of strong directional interactions with the TMS field, contributes to
+            the corticocortical networks that make the DLPFC important, and provides a
+            meaningful contrast with the deeper L5 model. For those reasons, DLPFC L2/3 is
+            a particularly useful model for asking whether stimulation parameters can be
+            tuned to reduce the required firing threshold.
+          </p>
+        </div>
+      
+        <div class="model-visual-block">
+          <div class="research-figure-grid research-figure-grid-four">
+            <figure class="research-figure">
+              <img src="assets/research/morph-l23-model.png" alt="Aberra Layer 2/3 pyramidal neuron morphology plot." loading="lazy" />
+              <figcaption><span class="figure-number">Figure 15.</span> Aberra L2/3 morphology used in the project.</figcaption>
+            </figure>
+            <figure class="research-figure">
+              <img src="assets/research/morph-l23-pre.png" alt="Layer 2/3 pyramidal neuron before stimulation." loading="lazy" />
+              <figcaption><span class="figure-number">Figure 16.</span> Before stimulation.</figcaption>
+            </figure>
+            <figure class="research-figure">
+              <img src="assets/research/morph-l23-initial.png" alt="Layer 2/3 pyramidal neuron during initial stimulation." loading="lazy" />
+              <figcaption><span class="figure-number">Figure 17.</span> Initial stimulation.</figcaption>
+            </figure>
+            <figure class="research-figure">
+              <img src="assets/research/morph-l23-peak.png" alt="Layer 2/3 pyramidal neuron near peak stimulation." loading="lazy" />
+              <figcaption><span class="figure-number">Figure 18.</span> Peak stimulation.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+      </article>
+
+      <article id="threshold" class="morphology-section threshold-section">
+        <div class="morphology-section-heading">
+          <p class="eyebrow">FROM MORPHOLOGY TO LOWER THRESHOLD</p>
+          <h2>How morphology can guide more efficient stimulation</h2>
+        </div>
+
+        <p class="threshold-lead">
+          The neuron itself is not being redesigned. Instead, the simulation lets us search
+          for stimulation conditions that take advantage of the neuron's existing geometry.
+          If a particular combination of field direction and pulse timing drives a sensitive
+          axonal site more effectively, the model may fire at a lower applied stimulation
+          intensity.
+        </p>
+
+        <div class="threshold-mechanisms">
+          <div>
+            <span>COIL ORIENTATION</span>
+            <h3>Point the field in a more effective direction</h3>
+            <p>
+              Rotating the coil changes which neuronal branches are best aligned with the
+              electric field. This is why morphology and coil angle cannot be considered
+              independently.
+            </p>
+          </div>
+
+          <div>
+            <span>PULSE WIDTH</span>
+            <h3>Change how long the membrane is driven</h3>
+            <p>
+              Neuronal compartments have finite membrane time constants. Changing pulse
+              width changes the duration of polarization and therefore the stimulation
+              amplitude required to reach threshold.
+            </p>
+          </div>
+
+          <div>
+            <span>CELL TYPE</span>
+            <h3>Do not assume one threshold applies to every layer</h3>
+            <p>
+              L2/3 and L5 pyramidal neurons have different axonal and dendritic structures,
+              so the parameter set that is efficient for one cell may not be optimal for
+              another.
+            </p>
+          </div>
+
+          <div>
+            <span>BRAIN REGION</span>
+            <h3>The same neuron can behave differently in a different field</h3>
+            <p>
+              Moving from M1 to DLPFC changes cortical shape, depth, and field orientation.
+              Therefore, the region and the morphology have to be considered together.
+            </p>
+          </div>
+        </div>
+
+        
+        <div class="threshold-visual-section">
+          <div class="threshold-visual-heading">
+            <p class="eyebrow">WHAT THE PARAMETER SWEEPS LOOK LIKE</p>
+            <h3>Electric Field Alignment Helps Explain Coil Orientation Sensitivity</h3>
+            <p>
+              Coil orientation changes the direction of the induced electric field relative
+              to neuronal geometry. This conceptual relationship helps explain why some
+              orientations produce lower firing thresholds than others. After selecting an
+              efficient coil orientation, pulse width sweeps show how the required field
+              changes with stimulation duration.
+            </p>
+          </div>
+          <figure class="research-figure research-figure-wide research-figure-light">
+            <img src="assets/research/morph-orientation-sweep.png"
+                 alt="Coil orientation sweep showing stimulation threshold changing with coil angle."
+                 loading="lazy" />
+            <figcaption><span class="figure-number">Figure 19.</span> 
+The conceptual relationship between electric field alignment and firing threshold. 
+The red arrows and neuron sketches highlight how a more parallel field alignment is associated 
+with a lower threshold trend, while a more perpendicular field alignment is associated with a higher threshold trend.
+</figcaption>
+          </figure>
+          <div class="research-figure-grid research-figure-grid-two">
+            <figure class="research-figure research-figure-light">
+              <img src="assets/research/morph-l23-lapicque.png"
+                   alt="DLPFC Layer 2/3 strength duration curve with Lapicque fit."
+                   loading="lazy" />
+              <figcaption><span class="figure-number">Figure 20.</span> DLPFC L2/3 strength duration response.</figcaption>
+            </figure>
+            <figure class="research-figure research-figure-light">
+              <img src="assets/research/morph-m1-lapicque.png"
+                   alt="Motor Cortex Layer 5 strength duration curve with Lapicque fit."
+                   loading="lazy" />
+              <figcaption><span class="figure-number">Figure 21.</span> Motor Cortex L5 strength duration response.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+<div class="threshold-core-idea">
+          <strong>The optimization goal is not simply “use less power.”</strong>
+          It is to find stimulation parameters that produce the intended neuronal response
+          more efficiently, so that lower required stimulator output follows from better
+          coupling between the TMS field and the neurons being targeted.
+        </div>
+      </article>
+
+      <article id="conclusion" class="morphology-section morphology-conclusion research-conclusion">
+        <p class="eyebrow">DATA BACKED CONCLUSION</p>
+        <h2>Neural Scale Optimization Can Lower Firing Thresholds</h2>
+
+        <p class="research-conclusion-lead">
+          <strong>Yes. Neural scale simulation can identify TMS parameters that require
+          substantially lower dI/dt to fire DLPFC L2/3 neurons.</strong>
+          Coil orientation, pulse width, and pulse shape each changed the firing threshold
+          in our results. This means stimulation parameters can be selected based on how
+          efficiently they interact with the neuron rather than assuming that one setting
+          is optimal for every condition.
+        </p>
+
+        <div class="conclusion-data-grid">
+          <section class="conclusion-data-card">
+            <span>COIL ORIENTATION</span>
+            <strong>Up to 48.4% lower dI/dt</strong>
+            <p>
+              At 150 µs, choosing the best coil orientation instead of the least efficient
+              tested orientation reduced the DLPFC L2/3 firing threshold by
+              <strong>45.6%</strong> for rectangular pulses,
+              <strong>48.4%</strong> for monophasic pulses, and
+              <strong>31.0%</strong> for biphasic pulses.
+            </p>
+          </section>
+
+          <section class="conclusion-data-card">
+            <span>PULSE WIDTH</span>
+            <strong>More than 94% lower dI/dt</strong>
+            <p>
+              Across the available 15 to 600 µs pulse width sweep, the DLPFC L2/3
+              threshold decreased from <strong>297 to 15</strong> for rectangular,
+              <strong>533 to 19</strong> for monophasic, and
+              <strong>989 to 25</strong> for biphasic stimulation.
+            </p>
+          </section>
+
+          <section class="conclusion-data-card">
+            <span>PULSE SHAPE</span>
+            <strong>43 vs 47 vs 87 dI/dt</strong>
+            <p>
+              At 150 µs and each pulse shape's optimized coil orientation, the DLPFC
+              L2/3 firing thresholds were <strong>43</strong> for rectangular,
+              <strong>47</strong> for monophasic, and <strong>87</strong> for
+              biphasic stimulation. The rectangular threshold was about
+              <strong>50.6% lower</strong> than the biphasic threshold.
+            </p>
+          </section>
+        </div>
+
+        <div class="research-conclusion-answer">
+          <span>WHAT THE DATA SAYS</span>
+          <p>
+            The neuronal firing threshold is not fixed. By analyzing stimulation at the
+            neural scale, we can identify combinations of coil orientation, pulse width,
+            and pulse shape that reduce the dI/dt required to trigger an action potential.
+            This gives the project a direct method for finding more efficient stimulation
+            conditions at the neuronal level.
+          </p>
+        </div>
+
+        <p class="research-conclusion-note">
+          These results describe the dI/dt required to reach neuronal firing threshold.
+          They do not by themselves measure total device energy or real world power cost.
+        </p>
+      </article>
+
+      <a class="back-link" href="brain-regions.html">← Back to Brain Regions</a>
+    </section>
+  </main>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-affiliation">
+        <img
+          class="footer-seal"
+          src="https://en.wikipedia.org/wiki/Special:Redirect/file/University_of_Portland_seal.svg"
+          alt="University of Portland seal"
+        >
+
+        <div>
+          <strong>University of Portland</strong>
+          <span>Shiley School of Engineering</span>
+          <small>Student research project on repetitive transcranial magnetic stimulation.</small>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links" aria-label="Footer links">
+          <a href="about.html">About</a>
+          <span class="footer-separator" aria-hidden="true">|</span>
+          <a href="partners.html">Partners</a>
+          <span class="footer-separator" aria-hidden="true">|</span>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-ai-note">Web page made with AI.</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
