@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overview | rTMS</title>
+  <link rel="stylesheet" href="styles.css?v=15">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-shell">
+      <div class="header-top-row">
+        <a class="brand" href="index.html">Repetitive Transcranial Magnetic Stimulation (rTMS)</a>
+
+        <a
+          class="university-lockup"
+          href="https://engineering.up.edu/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="University of Portland Shiley School of Engineering"
+        >
+          <img
+            class="header-seal"
+            src="https://en.wikipedia.org/wiki/Special:Redirect/file/University_of_Portland_seal.svg"
+            alt="University of Portland seal"
+          >
+          <span class="university-lockup-text">
+            <strong>University of Portland</strong>
+            <span>Shiley School of Engineering</span>
+          </span>
+        </a>
+      </div>
+
+      <nav aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a class="active-nav" href="overview.html">Overview</a>
+          <a href="brain-regions.html">Brain Regions</a>
+          <a href="neuron-morphology.html">Neuron Morphology</a>
+          <a href="diego-1.html">Diego 1</a>
+          <a href="diego-2.html">Diego 2</a>
+          <a href="published-work.html">Published Work</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main overview-page">
+    <section class="page-hero overview-hero">
+      <p class="eyebrow">PROJECT OVERVIEW</p>
+      <h1>Transcranial Magnetic Stimulation and Its Role in the Treatment of Depression</h1>
+      <p>
+        Transcranial magnetic stimulation is a noninvasive way to influence brain activity.
+        This page introduces how TMS works, how it became a treatment for depression, why
+        clinical stimulation intensity is often based on motor threshold, and how our
+        computational research is exploring ways to make stimulation more efficient.
+      </p>
+
+      <div class="overview-jump-nav">
+        <a href="#what-is-tms">What is TMS?</a>
+        <a href="#history">History</a>
+        <a href="#clinical-process">Clinical Process</a>
+        <a href="#accessibility">Accessibility</a>
+        <a href="#our-work">What Is Our Role?</a>
+      </div>
+    </section>
+
+    <section class="page-content overview-content">
+
+      <article id="what-is-tms" class="overview-section overview-lead">
+        <div class="overview-section-heading">
+          <p class="eyebrow">THE BASICS</p>
+          <h2>What is TMS?</h2>
+        </div>
+
+        <div class="overview-two-column">
+          <div>
+            <p class="overview-large-copy">
+              <strong>Transcranial magnetic stimulation (TMS)</strong> uses a coil placed
+              tangential to the head, creating a rapidly changing magnetic field. That
+              magnetic field passes through the scalp and skull, inducing a small electric
+              field in the brain. This induced field changes neuronal activity and can
+              trigger a response.
+            </p>
+
+            <p>
+              When pulses are delivered repeatedly, the technique is called
+              <strong>repetitive TMS, or rTMS</strong>. Repeated stimulation can influence
+              activity within the targeted brain region and the larger neural networks
+              connected to it. In this project, understanding and optimizing that interaction
+              may ultimately reduce the stimulation power required. For depression, one of
+              the most common targets is the
+              <strong>left dorsolateral prefrontal cortex (DLPFC)</strong>.
+            </p>
+          </div>
+
+          <aside class="overview-callout">
+            <span class="callout-kicker">WHY IT MATTERS</span>
+            <h3>Noninvasive brain stimulation</h3>
+            <p>
+              TMS does not require surgery or implanted electrodes. The patient remains
+              awake while the coil delivers magnetic pulses from outside the head.
+            </p>
+          </aside>
+        </div>
+
+        <div class="how-it-works-flow" aria-label="How TMS works">
+          <div class="flow-card">
+            <span>1</span>
+            <strong>Current enters the coil</strong>
+            <p>A rapidly changing electrical current flows through the TMS coil.</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-card">
+            <span>2</span>
+            <strong>A magnetic field is created</strong>
+            <p>The changing current produces a brief magnetic field around the coil.</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-card">
+            <span>3</span>
+            <strong>An electric field is induced</strong>
+            <p>The magnetic field induces an electric field in conductive brain tissue.</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-card">
+            <span>4</span>
+            <strong>Neurons respond</strong>
+            <p>If stimulation is strong enough, neuronal membrane activity can be altered.</p>
+          </div>
+        </div>
+
+        <figure class="research-figure research-figure-wide">
+          <img src="assets/research/overview-tms-mechanism.png"
+               alt="Diagram showing a TMS coil above the brain with magnetic field and induced current."
+               loading="lazy" />
+          <figcaption><span class="figure-number">Figure 1.</span> A simplified view of TMS showing how the coil produces a magnetic field that
+            induces an electric field in the brain.
+          </figcaption>
+        </figure>
+      </article>
+
+      <article id="history" class="overview-section">
+        <div class="overview-section-heading">
+          <p class="eyebrow">A SHORT HISTORY</p>
+          <h2>History of TMS</h2>
+          <p>
+            The physics behind TMS comes from electromagnetic induction, but practical
+            stimulation of the human brain for clinical treatment arrived much later.
+            Clinical uses have expanded from <strong>depression</strong> to conditions
+            including migraine, obsessive compulsive disorder (OCD), smoking cessation,
+            and, more recently, post-traumatic stress disorder (PTSD). TMS is also being
+            investigated for additional neurological and psychiatric conditions. Depression
+            remains the primary focus of this project.
+          </p>
+        </div>
+
+        <div class="history-timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1831</div>
+            <div>
+              <h3>Electromagnetic induction</h3>
+              <p>
+                Michael Faraday demonstrated that a changing magnetic field can induce
+                electrical current.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">1985</div>
+            <div>
+              <h3>Modern TMS is demonstrated</h3>
+              <p>
+                Anthony Barker and colleagues demonstrated noninvasive magnetic stimulation
+                of the human motor cortex, establishing the modern form of TMS.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-focus">
+            <div class="timeline-year">2008</div>
+            <div>
+              <h3>FDA clearance for major depression</h3>
+              <p>
+                The first TMS system was cleared by the U.S. Food and Drug Administration
+                for treating major depressive disorder in adults who had not received
+                satisfactory benefit from at least one antidepressant medication in the
+                current episode.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2013–2020</div>
+            <div>
+              <h3>Additional clinical uses expand</h3>
+              <p>
+                FDA cleared TMS applications expanded beyond major depression. TMS was
+                cleared for treatment of pain associated with certain migraine headaches
+                in 2013, deep TMS was cleared for obsessive compulsive disorder in 2018,
+                and a deep TMS system was cleared as an aid for short term smoking cessation
+                in adults in 2020.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-modern">
+            <div class="timeline-year">2020 to Present</div>
+            <div>
+              <h3>Faster, more personalized, and broader TMS</h3>
+              <p>
+                Recent work has focused on shorter treatment protocols, accelerated
+                stimulation schedules, and more individualized targeting. In 2022, the
+                FDA cleared the Magnus Neuromodulation System with SAINT technology, an
+                accelerated depression treatment approach that combines repeated iTBS
+                sessions with individualized targeting. In 2026, the FDA also cleared a
+                TMS system for treatment of PTSD. Research continues on connectivity guided
+                targeting, accelerated protocols, and ways to make TMS more efficient and
+                accessible.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article id="clinical-process" class="overview-section">
+        <div class="overview-section-heading">
+          <p class="eyebrow">CLINICAL TMS</p>
+          <h2>What does a depression treatment course look like?</h2>
+          <p>
+            Exact protocols vary by device and treatment type, but a traditional
+            high frequency depression protocol illustrates why the motor cortex plays such
+            an important role in setting treatment intensity.
+          </p>
+        </div>
+
+        <div class="clinical-steps">
+          <div class="clinical-step">
+            <div class="step-number">1</div>
+            <div>
+              <h3>Find the motor hotspot and measure motor threshold</h3>
+              <p>
+                The coil is positioned over the primary motor cortex (M1), and stimulation
+                intensity is adjusted until a reliable motor evoked response can be measured
+                from a hand muscle. This establishes the patient's motor threshold: a
+                patient specific physiological reference for TMS intensity.
+              </p>
+            </div>
+          </div>
+
+          <div class="clinical-step">
+            <div class="step-number">2</div>
+            <div>
+              <h3>Move to the depression target</h3>
+              <p>
+                For clinical treatment of depression, the coil is then positioned over the
+                left DLPFC rather than the motor cortex.
+              </p>
+            </div>
+          </div>
+
+          <div class="clinical-step clinical-step-accent">
+            <div class="step-number">3</div>
+            <div>
+              <h3>Set treatment intensity using the “120% rule”</h3>
+              <p>
+                A widely used high frequency left DLPFC protocol delivers stimulation at
+                approximately <strong>120% of the patient's resting motor threshold</strong>.
+                In other words, the intensity measured at the motor cortex is multiplied by
+                1.2 and used as the reference dose for stimulation of the DLPFC.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        
+        <figure class="research-figure research-figure-wide research-figure-contained">
+          <img src="assets/research/overview-clinical-setup.png"
+               alt="Illustration of a clinical TMS setup with a patient, TMS coil, stimulator unit, and monitor."
+               loading="lazy" />
+          <figcaption><span class="figure-number">Figure 2.</span> Modern clinical TMS depends on a large stimulator, monitoring equipment,
+            specialized clinical space, and trained personnel. These requirements contribute
+            to high cost, limited portability, and repeated clinic visits.
+          </figcaption>
+        </figure>
+
+        <div class="rule-explainer">
+          <div>
+            <p class="eyebrow">WHY USE MOTOR THRESHOLD?</p>
+            <h3>The motor cortex gives us something the DLPFC does not</h3>
+            <p>
+              The strong electromagnetic pulse produced by TMS can create large artifacts
+              in simultaneous neural recordings such as electroencephalography (EEG),
+              making immediate local measurement of DLPFC firing technically challenging.
+              The motor cortex provides a simpler physiological readout: when stimulation
+              activates the motor system, a motor evoked potential can be recorded with
+              electromyography (EMG) from a hand muscle. Because the DLPFC has no equivalent
+              physical motor response, motor threshold provides a patient specific reference
+              for setting stimulation intensity. A common depression protocol uses
+              approximately 120% of resting motor threshold over the DLPFC.
+            </p>
+          </div>
+
+          <div>
+            <p class="eyebrow">AN IMPORTANT DISTINCTION</p>
+            <h3>120% is a clinical protocol and not a universal biological constant</h3>
+            <p>
+              Different TMS devices and settings can use different stimulation intensities.
+              The 120% value is especially associated with established depression protocols
+              and should not be interpreted as proof that the motor cortex and the DLPFC
+              require stimulation in a fixed 120% biological relationship.
+            </p>
+          </div>
+        </div>
+
+        <p class="clinical-course-note">
+          Traditional rTMS courses for depression commonly involve treatment on weekdays
+          over several weeks. Newer approaches such as theta burst and accelerated protocols
+          are being studied and used to reduce the amount of time required for treatment.
+        </p>
+      </article>
+
+      <article id="accessibility" class="overview-section accessibility-section">
+        <div class="overview-section-heading">
+          <p class="eyebrow">PROJECT MOTIVATION</p>
+          <h2>Steps Towards More Accessible TMS</h2>
+          <p>
+            TMS avoids surgery and has become an important option for depression, but
+            noninvasive does not automatically mean easy to access. Treatment still requires
+            specialized equipment, trained staff, repeated visits, and substantial electrical
+            and clinical infrastructure.
+          </p>
+        </div>
+
+        <div class="accessibility-grid">
+          <section class="access-card">
+            <span class="access-label">CURRENT LIMITATIONS</span>
+            <h3>Why access can still be difficult</h3>
+            <ul>
+              <li><strong>Time:</strong> traditional treatment can require frequent visits over four to six weeks.</li>
+              <li><strong>Cost and infrastructure:</strong> systems require specialized equipment, clinic space, operators, and maintenance.</li>
+              <li><strong>Individual variability:</strong> anatomy, target location, and neuronal response vary from person to person.</li>
+              <li><strong>Targeting and dosing:</strong> the optimal stimulation location and intensity are still active areas of research.</li>
+              <li><strong>Limited direct depth:</strong> conventional TMS most directly affects superficial cortical tissue, while clinical effects can involve larger connected networks.</li>
+            </ul>
+          </section>
+
+          <section class="access-card access-card-future">
+            <span class="access-label">FUTURE GOALS</span>
+            <h3>Where TMS could improve</h3>
+            <ul>
+              <li>More individualized targeting based on anatomy and brain networks.</li>
+              <li>Better ways to determine the stimulation dose needed at the actual treatment region.</li>
+              <li>Shorter treatment sessions and courses when clinically appropriate.</li>
+              <li>More energy efficient stimulation parameters and hardware.</li>
+              <li>Systems that are easier to deploy in more clinics and, eventually, less resource intensive settings.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="accessibility-thesis">
+          <strong>Our engineering question:</strong>
+          If we can produce the desired neuronal response using more efficient combinations
+          of coil orientation, pulse width, waveform, and target specific parameters, can the
+          required stimulator output be reduced without simply assuming that more power is better?
+        </div>
+      </article>
+
+      
+        <div class="overview-visual-section">
+          <div class="overview-visual-heading">
+            <p class="eyebrow">COMPUTATIONAL WORKFLOW</p>
+            <h3>From the TMS Field to an Individual Neuron</h3>
+            <p>
+              NeMo TMS connects electric field modeling with a three dimensional neuron
+              model so that stimulation can be examined at the scale where an action
+              potential actually begins.
+            </p>
+          </div>
+
+          <figure class="research-figure research-figure-wide research-figure-contained">
+            <img src="assets/research/overview-nemo-pipeline.png"
+                 alt="NeMo TMS pipeline showing reconstruction, electric field modeling, neuron placement, waveform input, and visualization."
+                 loading="lazy" />
+            <figcaption><span class="figure-number">Figure 3.</span> The NeMo TMS workflow links electric field modeling, neuron placement,
+              waveform input, and neuronal response visualization.
+            </figcaption>
+          </figure>
+
+          <div class="overview-tool-grid">
+            <figure class="research-figure research-figure-tall">
+              <img src="assets/research/overview-guinemo-interface.png"
+                   alt="GUINeMo simulation interface showing coil angle, pulse width, waveform, threshold search, and neuron position inputs."
+                   loading="lazy" />
+              <figcaption><span class="figure-number">Figure 4.</span> GUINeMo lets us run controlled sweeps of coil angle, pulse width, waveform,
+                neuron position, and firing threshold.
+              </figcaption>
+            </figure>
+
+            <div class="overview-tool-copy">
+              <span class="mini-label">WHY THIS MATTERS</span>
+              <h3>One Variable Can Be Changed at a Time</h3>
+              <p>
+                The simulation interface allows the project to isolate specific parameters
+                while keeping the rest of the model constant. This makes it possible to
+                identify the coil orientation and pulse settings that produce the lowest
+                neuronal firing threshold for each model.
+              </p>
+            </div>
+          </div>
+        </div>
+
+<article id="our-work" class="overview-section our-work-section">
+        <div class="overview-section-heading">
+          <p class="eyebrow">OUR RESEARCH</p>
+          <h2>What Is Our Role?</h2>
+          <p>
+            Instead of testing stimulation parameters directly in patients, we use
+            computational models to examine how neurons respond to TMS under controlled
+            conditions.
+          </p>
+        </div>
+
+        <div class="research-pipeline">
+          <div class="pipeline-card">
+            <span class="pipeline-label">01</span>
+            <h3>Model the head and coil</h3>
+            <p>
+              We use electromagnetic modeling to estimate the electric field produced in
+              the brain by a TMS coil.
+            </p>
+          </div>
+
+          <div class="pipeline-card">
+            <span class="pipeline-label">02</span>
+            <h3>Place realistic neurons in the field</h3>
+            <p>
+              Neuron morphologies are positioned in the motor cortex and left DLPFC so we
+              can study how anatomy and orientation affect stimulation.
+            </p>
+          </div>
+
+          <div class="pipeline-card">
+            <span class="pipeline-label">03</span>
+            <h3>Simulate the neuronal response</h3>
+            <p>
+              We calculate how membrane voltage changes and determine the stimulation
+              threshold required to make modeled neurons fire.
+            </p>
+          </div>
+
+          <div class="pipeline-card">
+            <span class="pipeline-label">04</span>
+            <h3>Compare stimulation parameters</h3>
+            <p>
+              We vary factors such as coil orientation, pulse width, waveform, cortical
+              region, and pyramidal neuron morphology to look for the most efficient conditions.
+            </p>
+          </div>
+        </div>
+
+        <div class="open-question">
+          <p class="eyebrow">THE QUESTION WE ARE BUILDING TOWARD</p>
+          <h2>Does motor threshold translate to the DLPFC as simply as 120%?</h2>
+          <p>
+            The motor cortex is useful because its activation can be measured through a
+            muscle response. But the DLPFC is a different cortical region, with different
+            geometry, field orientation, cellular organization, and neuronal morphologies.
+          </p>
+          <p>
+            That raises an important question: <strong>should a fixed percentage of M1 motor
+            threshold always be expected to represent the most efficient stimulation dose for
+            the DLPFC?</strong>
+          </p>
+        </div>
+      </article>
+
+      <a class="back-link" href="index.html">← Back to Home</a>
+    </section>
+  </main>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-affiliation">
+        <img
+          class="footer-seal"
+          src="https://en.wikipedia.org/wiki/Special:Redirect/file/University_of_Portland_seal.svg"
+          alt="University of Portland seal"
+        >
+
+        <div>
+          <strong>University of Portland</strong>
+          <span>Shiley School of Engineering</span>
+          <small>Student research project on repetitive transcranial magnetic stimulation.</small>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links" aria-label="Footer links">
+          <a href="about.html">About</a>
+          <span class="footer-separator" aria-hidden="true">|</span>
+          <a href="partners.html">Partners</a>
+          <span class="footer-separator" aria-hidden="true">|</span>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-ai-note">Web page made with AI.</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
