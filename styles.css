@@ -2689,3 +2689,290 @@ nav a.active-nav{opacity:1;text-decoration:underline;text-underline-offset:5px}
 .region-research-conclusion .research-figure .figure-number{
   color:#1E1656;
 }
+
+
+/* =========================================================
+   Shiley School of Engineering approved logo lockup
+   ========================================================= */
+.header-seal,
+.footer-seal{
+  filter:none !important;
+  background:#fff;
+  border-radius:5px !important;
+  object-fit:contain;
+}
+
+.header-seal{
+  width:145px;
+  height:auto;
+  max-height:87px;
+  padding:3px;
+}
+
+.footer-seal{
+  width:170px;
+  height:auto;
+  max-height:102px;
+  padding:3px;
+}
+
+.footer-affiliation > div{
+  max-width:260px;
+}
+
+.footer-affiliation small{
+  margin-top:0;
+  line-height:1.45;
+}
+
+/* =========================================================
+   About, Partners, Contact, and University of Portland work
+   ========================================================= */
+.about-content,
+.partners-content,
+.contact-content{
+  max-width:1180px;
+}
+
+.about-intro-card{
+  padding:30px;
+  border:1px solid #DDD7E8;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 8px 26px rgba(30,22,86,.06);
+}
+
+.about-intro-card h2{
+  margin:6px 0 14px;
+  max-width:850px;
+  font-size:clamp(28px,4vw,42px);
+  line-height:1.1;
+}
+
+.about-grid,
+.partner-grid,
+.contact-grid{
+  display:grid;
+  gap:18px;
+  margin-top:24px;
+}
+
+.about-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+
+.about-card,
+.partner-card,
+.contact-card{
+  padding:24px;
+  border:1px solid #DDD7E8;
+  border-radius:14px;
+  background:#FAF9FC;
+}
+
+.about-card h3{
+  margin:6px 0 10px;
+  color:#1E1656;
+  font-size:21px;
+}
+
+.about-card p:last-child,
+.partner-card p:last-child{
+  margin-bottom:0;
+}
+
+.about-team-note,
+.partner-note{
+  margin-top:24px;
+  padding:18px 21px;
+  border-left:4px solid #665BA0;
+  border-radius:0 10px 10px 0;
+  background:#F2F0F8;
+  color:#514C5D;
+  line-height:1.65;
+}
+
+.about-team-note strong,
+.partner-note strong{
+  color:#1E1656;
+}
+
+.partner-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+
+.partner-card h2{
+  margin:6px 0 12px;
+  font-size:24px;
+}
+
+.partner-card-primary{
+  border-color:#BDB5D7;
+  background:#F2F0F8;
+}
+
+.contact-grid{
+  grid-template-columns:1fr 1fr;
+}
+
+.contact-card{
+  min-height:310px;
+  background:#fff;
+  box-shadow:0 7px 22px rgba(30,22,86,.05);
+}
+
+.contact-role{
+  margin:0 0 7px !important;
+  color:#7D74A1 !important;
+  font-size:11px !important;
+  font-weight:800;
+  letter-spacing:1.2px;
+}
+
+.contact-card h2{
+  margin:0 0 7px;
+  font-size:30px;
+}
+
+.contact-degree{
+  margin-top:0 !important;
+  color:#5E6A71 !important;
+}
+
+.contact-focus{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  margin:24px 0;
+  padding-top:18px;
+  border-top:1px solid #E2DFE9;
+}
+
+.contact-focus span{
+  color:#7D74A1;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.contact-focus strong{
+  color:#1E1656;
+  font-size:17px;
+  line-height:1.4;
+}
+
+.contact-email{
+  display:inline-flex;
+  align-items:center;
+  min-height:42px;
+  padding:9px 13px;
+  border-radius:8px;
+  background:#1E1656;
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.contact-email:hover{
+  background:#3D317F;
+}
+
+.contact-note{
+  margin-top:22px;
+}
+
+.contact-note a{
+  color:#1E1656;
+  font-weight:700;
+}
+
+.up-publication-list{
+  display:grid;
+  gap:14px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+.up-publication-list li{
+  display:grid;
+  grid-template-columns:72px minmax(0,1fr);
+  gap:18px;
+  align-items:start;
+  padding:20px 22px;
+  border:1px solid #E0DCE8;
+  border-radius:13px;
+  background:#FAF9FC;
+}
+
+.up-publication-year{
+  display:inline-flex;
+  justify-content:center;
+  padding:7px 10px;
+  border-radius:999px;
+  background:#1E1656;
+  color:#fff;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.5px;
+}
+
+.up-publication-list p{
+  margin:0;
+  max-width:none;
+  color:#4F5B67;
+  line-height:1.65;
+}
+
+@media(max-width:900px){
+  .about-grid,
+  .partner-grid{
+    grid-template-columns:1fr;
+  }
+
+  .header-seal{
+    width:125px;
+  }
+}
+
+@media(max-width:720px){
+  .header-top-row{
+    align-items:flex-start;
+  }
+
+  .header-seal{
+    width:112px;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+  }
+
+  .footer-seal{
+    width:150px;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:520px){
+  .header-top-row{
+    gap:14px;
+  }
+
+  .header-seal{
+    width:98px;
+  }
+
+  .up-publication-list li{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .up-publication-year{
+    width:max-content;
+  }
+}
