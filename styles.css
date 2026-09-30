@@ -2976,3 +2976,22 @@ nav a.active-nav{opacity:1;text-decoration:underline;text-underline-offset:5px}
     width:max-content;
   }
 }
+
+/* Public Work: complete research bibliography */
+.complete-reference-list{
+  margin: 0;
+  padding-left: 1.65rem;
+  display: grid;
+  gap: 0.72rem;
+}
+
+.complete-reference-list li{
+  padding-left: 0.35rem;
+  color: var(--text-body, #333);
+  line-height: 1.55;
+}
+
+.complete-reference-list li::marker{
+  font-weight: 700;
+  color: var(--purple, #1E1656);
+}
